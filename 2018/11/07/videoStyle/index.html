@@ -7,17 +7,17 @@
   
   <title>video属性 | Tiny-京城小不点儿</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天遇到了一个关于video标签中调亮度的问题，查了好半天，终于找到了一个案例 ##在video标签里加上style，或者写class 1234&amp;lt;video id=&quot;video&quot; width=&quot;640&quot; height=&quot;480&quot; preload=&quot;auto&quot; controls=&quot;&quot; loop=&quot;&quot; autoplay=&quot;&quot; style=&quot;filter: blur(0px) saturate(1">
+  <meta name="description" content="今天遇到了一个关于video标签中调亮度的问题，查了好半天，终于找到了一个案例 在video标签里加上style，或者写class1234&amp;lt;video id=&quot;video&quot; width=&quot;640&quot; height=&quot;480&quot; preload=&quot;auto&quot; controls=&quot;&quot; loop=&quot;&quot; autoplay=&quot;&quot; style=&quot;filter: blur(0px) saturate(1) h">
 <meta property="og:type" content="article">
 <meta property="og:title" content="video属性">
 <meta property="og:url" content="http://yoursite.com/2018/11/07/videoStyle/index.html">
 <meta property="og:site_name" content="Tiny-京城小不点儿">
-<meta property="og:description" content="今天遇到了一个关于video标签中调亮度的问题，查了好半天，终于找到了一个案例 ##在video标签里加上style，或者写class 1234&amp;lt;video id=&quot;video&quot; width=&quot;640&quot; height=&quot;480&quot; preload=&quot;auto&quot; controls=&quot;&quot; loop=&quot;&quot; autoplay=&quot;&quot; style=&quot;filter: blur(0px) saturate(1">
+<meta property="og:description" content="今天遇到了一个关于video标签中调亮度的问题，查了好半天，终于找到了一个案例 在video标签里加上style，或者写class1234&amp;lt;video id=&quot;video&quot; width=&quot;640&quot; height=&quot;480&quot; preload=&quot;auto&quot; controls=&quot;&quot; loop=&quot;&quot; autoplay=&quot;&quot; style=&quot;filter: blur(0px) saturate(1) h">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-07T15:38:22.554Z">
+<meta property="og:updated_time" content="2018-11-07T15:39:39.131Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="video属性">
-<meta name="twitter:description" content="今天遇到了一个关于video标签中调亮度的问题，查了好半天，终于找到了一个案例 ##在video标签里加上style，或者写class 1234&amp;lt;video id=&quot;video&quot; width=&quot;640&quot; height=&quot;480&quot; preload=&quot;auto&quot; controls=&quot;&quot; loop=&quot;&quot; autoplay=&quot;&quot; style=&quot;filter: blur(0px) saturate(1">
+<meta name="twitter:description" content="今天遇到了一个关于video标签中调亮度的问题，查了好半天，终于找到了一个案例 在video标签里加上style，或者写class1234&amp;lt;video id=&quot;video&quot; width=&quot;640&quot; height=&quot;480&quot; preload=&quot;auto&quot; controls=&quot;&quot; loop=&quot;&quot; autoplay=&quot;&quot; style=&quot;filter: blur(0px) saturate(1) h">
   
     <link rel="alternate" href="/atom.xml" title="Tiny-京城小不点儿" type="application/atom+xml">
   
@@ -87,21 +87,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>今天遇到了一个关于video标签中调亮度的问题，查了好半天，终于找到了<a href="https://codepen.io/ygjack/pen/xrqQjR" target="_blank" rel="noopener">一个案例</a></p>
-<p>##在video标签里加上style，或者写class</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;video id=<span class="string">"video"</span> width=<span class="string">"640"</span> height=<span class="string">"480"</span> preload=<span class="string">"auto"</span> controls=<span class="string">""</span> loop=<span class="string">""</span> autoplay=<span class="string">""</span> style=<span class="string">"filter: blur(0px) saturate(1) hue-rotate(0deg) brightness(0.9) contrast(1) invert(0) sepia(0);"</span>&gt;</span><br><span class="line">   &lt;<span class="built_in">source</span> src=<span class="string">"http://116.211.93.149/vkp.tc.qq.com/r0023hb5s6k.mp4?vkey=C20D20F6982F172D47405A2AD5AAFDF8E45DAF2E915F7E69DA0F48C9A90BC355E0D4C38C09EF5DF5729E8727064C7F547EC30DC9C768D731099F5033C998DDDCDB6D3A42813168C97D7E7E72BED220D3150BF640872580F1&amp;amp;br=72&amp;amp;platform=2&amp;amp;fmt=auto&amp;amp;level=0&amp;amp;sdtfrom=v3010&amp;amp;guid=c1061b2b22bd44e4c6ce66966df9a927&amp;amp;locid=5938d864-3576-4298-9a0f-8122fe0c3ee4&amp;amp;size=5211947&amp;amp;ocid=655365548"</span> <span class="built_in">type</span>=<span class="string">"video/mp4"</span>&gt;</span><br><span class="line">   Your not cool and I won<span class="string">'t let you watch this awesome video of cows.</span></span><br><span class="line"><span class="string"> &lt;/video&gt;</span></span><br></pre></td></tr></table></figure>
-<p>###其中style中样式属性解释如下：</p>
-<p>####filter: blur(0px)       模糊</p>
-<p>####saturate(1)             饱和度</p>
-<p>####hue-rotate(0deg)         Hue</p>
-<p>####brightness(0.8)         亮度</p>
-<p>####contrast(1)             对比度</p>
-<p>####invert(0)                 反转</p>
-<p>####sepia(0)                 棕褐色</p>
-
+<h2 id="在video标签里加上style，或者写class"><a href="#在video标签里加上style，或者写class" class="headerlink" title="在video标签里加上style，或者写class"></a>在video标签里加上style，或者写class</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;video id=<span class="string">"video"</span> width=<span class="string">"640"</span> height=<span class="string">"480"</span> preload=<span class="string">"auto"</span> controls=<span class="string">""</span> loop=<span class="string">""</span> autoplay=<span class="string">""</span> style=<span class="string">"filter: blur(0px) saturate(1) hue-rotate(0deg) brightness(0.9) contrast(1) invert(0) sepia(0);"</span>&gt;</span><br><span class="line">   &lt;<span class="built_in">source</span> src=<span class="string">"http://116.211.93.149/vkp.tc.qq.com/r0023hb5s6k.mp4?vkey=C20D20F6982F172D47405A2AD5AAFDF8E45DAF2E915F7E69DA0F48C9A90BC355E0D4C38C09EF5DF5729E8727064C7F547EC30DC9C768D731099F5033C998DDDCDB6D3A42813168C97D7E7E72BED220D3150BF640872580F1&amp;amp;br=72&amp;amp;platform=2&amp;amp;fmt=auto&amp;amp;level=0&amp;amp;sdtfrom=v3010&amp;amp;guid=c1061b2b22bd44e4c6ce66966df9a927&amp;amp;locid=5938d864-3576-4298-9a0f-8122fe0c3ee4&amp;amp;size=5211947&amp;amp;ocid=655365548"</span> <span class="built_in">type</span>=<span class="string">"video/mp4"</span>&gt;</span><br><span class="line">   Your not cool and I won<span class="string">'t let you watch this awesome video of cows.</span></span><br><span class="line"><span class="string"> &lt;/video&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="其中style中样式属性解释如下："><a href="#其中style中样式属性解释如下：" class="headerlink" title="其中style中样式属性解释如下："></a>其中style中样式属性解释如下：</h3><h4 id="filter-blur-0px-模糊"><a href="#filter-blur-0px-模糊" class="headerlink" title="filter: blur(0px)       模糊"></a>filter: blur(0px)       模糊</h4><h4 id="saturate-1-饱和度"><a href="#saturate-1-饱和度" class="headerlink" title="saturate(1)             饱和度"></a>saturate(1)             饱和度</h4><h4 id="hue-rotate-0deg-Hue"><a href="#hue-rotate-0deg-Hue" class="headerlink" title="hue-rotate(0deg)         Hue"></a>hue-rotate(0deg)         Hue</h4><h4 id="brightness-0-8-亮度"><a href="#brightness-0-8-亮度" class="headerlink" title="brightness(0.8)         亮度"></a>brightness(0.8)         亮度</h4><h4 id="contrast-1-对比度"><a href="#contrast-1-对比度" class="headerlink" title="contrast(1)             对比度"></a>contrast(1)             对比度</h4><h4 id="invert-0-反转"><a href="#invert-0-反转" class="headerlink" title="invert(0)                 反转"></a>invert(0)                 反转</h4><h4 id="sepia-0-棕褐色"><a href="#sepia-0-棕褐色" class="headerlink" title="sepia(0)                 棕褐色"></a>sepia(0)                 棕褐色</h4>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/07/videoStyle/" data-id="cjo7bvo7e0003tsnu6hy2ukb6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/07/videoStyle/" data-id="cjo7bxvvi000354nu8mdt03e9" class="article-share-link">Share</a>
       
       
     </footer>
