@@ -7,14 +7,17 @@
   
   <title>video属性 | Tiny-京城小不点儿</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="今天遇到了一个关于video标签中调亮度的问题，查了好半天，终于找到了一个案例 ##在video标签里加上style，或者写class 1234&amp;lt;video id=&quot;video&quot; width=&quot;640&quot; height=&quot;480&quot; preload=&quot;auto&quot; controls=&quot;&quot; loop=&quot;&quot; autoplay=&quot;&quot; style=&quot;filter: blur(0px) saturate(1">
+<meta property="og:type" content="article">
 <meta property="og:title" content="video属性">
 <meta property="og:url" content="http://yoursite.com/2018/11/07/videoStyle/index.html">
 <meta property="og:site_name" content="Tiny-京城小不点儿">
+<meta property="og:description" content="今天遇到了一个关于video标签中调亮度的问题，查了好半天，终于找到了一个案例 ##在video标签里加上style，或者写class 1234&amp;lt;video id=&quot;video&quot; width=&quot;640&quot; height=&quot;480&quot; preload=&quot;auto&quot; controls=&quot;&quot; loop=&quot;&quot; autoplay=&quot;&quot; style=&quot;filter: blur(0px) saturate(1">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-07T15:07:10.646Z">
+<meta property="og:updated_time" content="2018-11-07T15:36:54.988Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="video属性">
+<meta name="twitter:description" content="今天遇到了一个关于video标签中调亮度的问题，查了好半天，终于找到了一个案例 ##在video标签里加上style，或者写class 1234&amp;lt;video id=&quot;video&quot; width=&quot;640&quot; height=&quot;480&quot; preload=&quot;auto&quot; controls=&quot;&quot; loop=&quot;&quot; autoplay=&quot;&quot; style=&quot;filter: blur(0px) saturate(1">
   
     <link rel="alternate" href="/atom.xml" title="Tiny-京城小不点儿" type="application/atom+xml">
   
@@ -83,11 +86,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>今天遇到了一个关于video标签中调亮度的问题，查了好半天，终于找到了<a href="https://codepen.io/ygjack/pen/xrqQjR" target="_blank" rel="noopener">一个案例</a></p>
+<p>##在video标签里加上style，或者写class</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;video id=<span class="string">"video"</span> width=<span class="string">"640"</span> height=<span class="string">"480"</span> preload=<span class="string">"auto"</span> controls=<span class="string">""</span> loop=<span class="string">""</span> autoplay=<span class="string">""</span> style=<span class="string">"filter: blur(0px) saturate(1) hue-rotate(0deg) brightness(0.9) contrast(1) invert(0) sepia(0);"</span>&gt;</span><br><span class="line">   &lt;<span class="built_in">source</span> src=<span class="string">"http://116.211.93.149/vkp.tc.qq.com/r0023hb5s6k.mp4?vkey=C20D20F6982F172D47405A2AD5AAFDF8E45DAF2E915F7E69DA0F48C9A90BC355E0D4C38C09EF5DF5729E8727064C7F547EC30DC9C768D731099F5033C998DDDCDB6D3A42813168C97D7E7E72BED220D3150BF640872580F1&amp;amp;br=72&amp;amp;platform=2&amp;amp;fmt=auto&amp;amp;level=0&amp;amp;sdtfrom=v3010&amp;amp;guid=c1061b2b22bd44e4c6ce66966df9a927&amp;amp;locid=5938d864-3576-4298-9a0f-8122fe0c3ee4&amp;amp;size=5211947&amp;amp;ocid=655365548"</span> <span class="built_in">type</span>=<span class="string">"video/mp4"</span>&gt;</span><br><span class="line">   Your not cool and I won<span class="string">'t let you watch this awesome video of cows.</span></span><br><span class="line"><span class="string"> &lt;/video&gt;</span></span><br></pre></td></tr></table></figure>
+<p>###其中style中样式属性解释如下：</p>
+<pre><code>####filter: blur(0px)       模糊
+####saturate(1)             饱和度
+####hue-rotate(0deg)         Hue
+####brightness(0.8)         亮度
+####contrast(1)             对比度
+####invert(0)                 反转
+####sepia(0)                 棕褐色
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/07/videoStyle/" data-id="cjo7brv7l0003w8nuk1s4ytf3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/07/videoStyle/" data-id="cjo7btvn20003u4nudklmr5vl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -100,7 +114,7 @@
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          弹性盒
+          CSS3弹性盒布局方式
         
       </div>
     </a>
@@ -145,7 +159,7 @@
       <ul>
         
           <li>
-            <a href="/2018/11/07/flexbox/">弹性盒</a>
+            <a href="/2018/11/07/flexbox/">CSS3弹性盒布局方式</a>
           </li>
         
           <li>
