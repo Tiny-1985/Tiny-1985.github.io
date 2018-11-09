@@ -85,24 +85,24 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>水平垂直居中，总结出四种方法</p>
-<h1 id="方案1：position-元素已知宽度"><a href="#方案1：position-元素已知宽度" class="headerlink" title="方案1：position 元素已知宽度"></a>方案1：position 元素已知宽度</h1><hr>
+<h3 id="方案1：position-元素已知宽度"><a href="#方案1：position-元素已知宽度" class="headerlink" title="方案1：position 元素已知宽度"></a>方案1：position 元素已知宽度</h3><hr>
 
 
 <p>父元素设置为：position: relative;<br>子元素设置为：position: absolute;<br>距上50%，据左50%，然后减去元素自身宽度的距离就可以实现 </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">"box"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"content"</span>&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">.box &#123;</span><br><span class="line">    background-color: <span class="comment">#FF8C00;</span></span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 300px;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.content &#123;</span><br><span class="line">    background-color: <span class="comment">#F00;</span></span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 50%;</span><br><span class="line">    top: 50%;</span><br><span class="line">    margin: -50px 0 0 -50px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="img/16.png" alt=""></p>
-<h1 id="方案2：position-transform-元素未知宽度"><a href="#方案2：position-transform-元素未知宽度" class="headerlink" title="方案2：position transform 元素未知宽度"></a>方案2：position transform 元素未知宽度</h1><hr>
+<h3 id="方案2：position-transform-元素未知宽度"><a href="#方案2：position-transform-元素未知宽度" class="headerlink" title="方案2：position transform 元素未知宽度"></a>方案2：position transform 元素未知宽度</h3><hr>
 
 
 <p>如果元素未知宽度，只需将上面例子中的margin: -50px 0 0 -50px;替换为：transform: translate(-50%,-50%);<br>效果如上！ </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">"box"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"content"</span>&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">.box &#123;</span><br><span class="line">    background-color: <span class="comment">#FF8C00;</span></span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 300px;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.content &#123;</span><br><span class="line">    background-color: <span class="comment">#F00;</span></span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 50%;</span><br><span class="line">    top: 50%;</span><br><span class="line">    transform: translate(-50%,-50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="img/16.png" alt=""></p>
-<h1 id="方案3：flex布局"><a href="#方案3：flex布局" class="headerlink" title="方案3：flex布局"></a>方案3：flex布局</h1><hr>
+<h3 id="方案3：flex布局"><a href="#方案3：flex布局" class="headerlink" title="方案3：flex布局"></a>方案3：flex布局</h3><hr>
 
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">"box"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"content"</span>&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">.box &#123;</span><br><span class="line">    background-color: <span class="comment">#FF8C00;</span></span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 300px;</span><br><span class="line">    display: flex;//flex布局</span><br><span class="line">    justify-content: center;//使子项目水平居中</span><br><span class="line">    align-items: center;//使子项目垂直居中</span><br><span class="line">&#125;</span><br><span class="line">.content &#123;</span><br><span class="line">    background-color: <span class="comment">#F00;</span></span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="img/16.png" alt=""></p>
-<h1 id="方案4：table-cell布局"><a href="#方案4：table-cell布局" class="headerlink" title="方案4：table-cell布局"></a>方案4：table-cell布局</h1><hr>
+<h3 id="方案4：table-cell布局"><a href="#方案4：table-cell布局" class="headerlink" title="方案4：table-cell布局"></a>方案4：table-cell布局</h3><hr>
 
 
 
@@ -113,7 +113,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/09/css水平垂直居中/" data-id="cjoa3ensq000174nuwvcesll3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/09/css水平垂直居中/" data-id="cjoa3ho4q0002vwnub6o61v24" class="article-share-link">Share</a>
       
       
     </footer>
@@ -248,7 +248,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/07/flexbox/" data-id="cjoa3enss000274nuny7d7djx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/07/flexbox/" data-id="cjoa3ho4p0001vwnudsfzrs1f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -286,7 +286,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/07/videoStyle/" data-id="cjoa3ent7000474nukkyt4m3u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/07/videoStyle/" data-id="cjoa3ho4t0003vwnurf8ze0a0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -325,7 +325,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/04/animation/" data-id="cjoa3ensm000074nui1g4w7il" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/04/animation/" data-id="cjoa3ho4j0000vwnufyq3i5oa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -370,7 +370,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/04/hello-world/" data-id="cjoa3ent6000374nuipkwbisz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/04/hello-world/" data-id="cjoa3ho4u0004vwnu4kzh0681" class="article-share-link">Share</a>
       
       
     </footer>
