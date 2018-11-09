@@ -62,6 +62,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-node中api下载本地文件" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/09/node中api下载本地文件/" class="article-date">
+  <time datetime="2018-11-09T14:09:26.000Z" itemprop="datePublished">2018-11-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/09/node中api下载本地文件/">node中api下载本地文件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前两天遇到一个项目，需要下载本地服务器的文件，代码如下</p>
+<p>首先： node环境必备的</p>
+<p>第二步： 创建项目文件夹</p>
+<p>第三步： 打开cmd（window+R 输入cmd回车）</p>
+<p>第四步： 输入node命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm init</span><br></pre></td></tr></table></figure>
+<p>一路回车</p>
+<p>第五步： 进入项目文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> 项目名称</span><br></pre></td></tr></table></figure>
+<p>第六步：安装express框架</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express -S</span><br></pre></td></tr></table></figure>
+<p>第七步：创建js文件并输入下面代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const http = require(<span class="string">'http'</span>);</span><br><span class="line">const express = require(<span class="string">'express'</span>);</span><br><span class="line">const fs=require(<span class="string">"fs"</span>);</span><br><span class="line"></span><br><span class="line">const app = express();</span><br><span class="line">app.get(<span class="string">'/download/product.json'</span>, <span class="keyword">function</span> (req, res, next) &#123;</span><br><span class="line">  <span class="built_in">let</span> path=<span class="string">"G:\\autoreji\\getro-auto-regi\\product.json"</span>;</span><br><span class="line">  <span class="built_in">let</span> fileJson = fs.createReadStream(path);</span><br><span class="line">  res.writeHead(200, &#123;</span><br><span class="line">    <span class="string">'Content-Type'</span>: <span class="string">'application/force-download'</span>,</span><br><span class="line">    <span class="string">'Content-Disposition'</span>: <span class="string">'attachment; filename=product.json'</span></span><br><span class="line">  &#125;);</span><br><span class="line">  fileJson.pipe(res);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">http.createServer(app).listen(3000);</span><br></pre></td></tr></table></figure>
+<p>第八步： 运行这个js文件服务器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node js文件名称==》服务器文件名称</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/09/node中api下载本地文件/" data-id="cjoa40kuf0004jcnukl0dnfwg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-css水平垂直居中" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/11/09/css水平垂直居中/" class="article-date">
@@ -113,7 +164,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/09/css水平垂直居中/" data-id="cjoa3ho4q0002vwnub6o61v24" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/09/css水平垂直居中/" data-id="cjoa40ku90001jcnu7syarxr1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -248,7 +299,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/07/flexbox/" data-id="cjoa3ho4p0001vwnudsfzrs1f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/07/flexbox/" data-id="cjoa40kud0003jcnubfmg2qjx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -286,7 +337,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/07/videoStyle/" data-id="cjoa3ho4t0003vwnurf8ze0a0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/07/videoStyle/" data-id="cjoa40kuh0005jcnu4w4lak31" class="article-share-link">Share</a>
       
       
     </footer>
@@ -325,7 +376,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/04/animation/" data-id="cjoa3ho4j0000vwnufyq3i5oa" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/04/animation/" data-id="cjoa40ktv0000jcnu4dn6tz14" class="article-share-link">Share</a>
       
       
     </footer>
@@ -370,7 +421,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/04/hello-world/" data-id="cjoa3ho4u0004vwnu4kzh0681" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/04/hello-world/" data-id="cjoa40kuc0002jcnua5rllooj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -411,6 +462,10 @@
       <ul>
         
           <li>
+            <a href="/2018/11/09/node中api下载本地文件/">node中api下载本地文件</a>
+          </li>
+        
+          <li>
             <a href="/2018/11/09/css水平垂直居中/">css水平垂直居中</a>
           </li>
         
@@ -424,10 +479,6 @@
         
           <li>
             <a href="/2018/11/04/animation/">animation</a>
-          </li>
-        
-          <li>
-            <a href="/2018/11/04/hello-world/">使用Hexo</a>
           </li>
         
       </ul>
